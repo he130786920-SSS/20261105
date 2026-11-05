@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="使用五份課堂素材製作的 p5.js 像素格鬥遊戲，包含精靈圖切格、互動動畫與原創背景音樂。">
+  <meta name="theme-color" content="#0d1228">
+  <title>PIXEL RIFT｜像素時空道場</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Pixel Rift 首頁"><span class="brand-mark">P<span>✦</span>R</span><span class="brand-copy">PIXEL RIFT<small>ARCADE / VOL.01</small></span></a>
+      <div class="top-links"><span class="live-tag"><i></i> 角色動畫實驗室</span><button class="top-button" id="helpButton" type="button">操作指南 <span>↗</span></button></div>
+    </header>
+    <section class="intro" id="top">
+      <div class="intro-label"><span class="tiny-line"></span> INTERACTIVE SPRITE PROJECT <span class="intro-index">001—005</span></div>
+      <div class="intro-heading"><div><h1>像素<span>時空</span>道場<span class="period">.</span></h1><p class="subtitle">用精靈圖，讓角色真正動起來。<br>移動、跳躍、出拳、踢擊，闖過每一波敵人。</p></div><div class="intro-side"><span class="side-kicker">// PRESS START</span><span class="side-stars">✳ ✳ ✳</span><span class="side-caption">SPRITES × CODE × SOUND</span></div></div>
+    </section>
+    <main>
+      <div class="game-toolbar">
+        <div class="toolbar-left"><span class="toolbar-dot"></span><b>NEON DOJO</b><span class="toolbar-sep">/</span><span>街機訓練模式</span></div>
+        <div class="toolbar-right"><span id="statusLabel">READY TO PLAY</span><button id="soundButton" type="button" aria-pressed="false">♫ 音樂：關</button><button id="pauseButton" type="button">Ⅱ 暫停</button></div>
+      </div>
+      <div class="game-frame" id="gameFrame">
+        <div id="canvas-holder" role="img" aria-label="角色動畫遊戲：左右鍵移動、上鍵跳躍、Z 出拳、X 踢擊、空白鍵施放能量波。"></div>
+        <div class="game-fallback" id="loadingMessage">LOADING SPRITES <span>···</span></div>
+        <div class="hud-overlay" aria-hidden="true">
+          <div class="hud-left"><span class="hud-id">PLAYER 01 <span id="heroTitle">LEE JINKANG</span></span><div class="meter hp"><span id="healthMeter" style="width:100%"></span></div><div class="meter-caption"><b>HP</b><span id="hpText">100 / 100</span></div></div>
+          <div class="hud-mid"><span>WAVE <b id="waveText">01</b></span><strong id="scoreText">000000</strong><small>SCORE</small></div>
+          <div class="hud-right"><span class="hud-id">ENERGY <span id="energyText">100%</span></span><div class="meter energy"><span id="energyMeter" style="width:100%"></span></div><div class="meter-caption"><b>POWER</b><span>SPACE · ENERGY BLAST</span></div></div>
+        </div>
+        <div class="center-message" id="centerMessage"><span class="center-eyebrow">// THE GATE IS OPEN</span><h2>READY, <em>FIGHT!</em></h2><p>選擇角色，按下「開始遊戲」迎接挑戰。</p><button id="startButton" class="primary-action" type="button">開始遊戲 <span>↗</span></button><div class="message-hint">也可以按 Enter 開始</div></div>
+        <div class="game-watermark">PIXEL RIFT · MADE WITH p5.js</div>
+        <div class="mobile-controls"><button id="btnLeft" aria-label="向左移動">←</button><button id="btnRight" aria-label="向右移動">→</button><button id="btnJump" aria-label="跳躍">↑</button><button id="btnPunch" aria-label="拳擊">Z</button><button id="btnKick" aria-label="踢擊">X</button><button id="btnSpecial" aria-label="能量波">✦</button></div>
+      </div>
+      <div class="game-bottom"><div class="game-bottom-left"><span class="keycap">←</span><span class="keycap">→</span><span>移動</span><span class="slash">/</span><span class="keycap">↑</span><span>跳躍</span><span class="slash">/</span><span class="keycap">Z</span><span>拳擊</span><span class="slash">/</span><span class="keycap">X</span><span>踢擊</span><span class="slash">/</span><span class="keycap wide">SPACE</span><span>能量波</span></div><span class="bottom-index">01 / 03</span></div>
+      <section class="selector" id="characters"><div class="section-head"><div><span class="section-overline">CHOOSE YOUR FIGHTER</span><h2>選擇你的角色<span>↘</span></h2></div><span class="section-note">按鍵 1 / 2 也可以切換</span></div><div class="character-grid"><button class="fighter selected" data-fighter="lee" type="button" aria-pressed="true"><span class="fighter-number">01</span><span class="fighter-portrait lee-portrait"><img src="assets/portraits/lee.png" alt="李振康像素角色"></span><span class="fighter-copy"><strong>李振康 <small>LEE JINKANG</small></strong><span>近戰拳腳 · 強力踢擊</span></span><span class="fighter-check">✓</span></button><button class="fighter" data-fighter="chun" type="button" aria-pressed="false"><span class="fighter-number">02</span><span class="fighter-portrait chun-portrait"><img src="assets/portraits/chun.png" alt="春麗像素角色"></span><span class="fighter-copy"><strong>春麗 <small>CHUN-LI</small></strong><span>靈巧移動 · 快速連段</span></span><span class="fighter-check">✓</span></button></div></section>
+      <section class="controls" id="controls"><div class="section-head"><div><span class="section-overline">THE CONTROLS</span><h2>操作說明<span>↘</span></h2></div><span class="section-note">鍵盤和觸控都能玩</span></div><div class="control-grid"><div class="control"><span class="control-icon">← →</span><div><b>左右移動</b><small>方向鍵 / A、D</small></div></div><div class="control"><span class="control-icon">↑</span><div><b>跳躍</b><small>上鍵 / W</small></div></div><div class="control"><span class="control-icon">Z / X</span><div><b>拳擊 / 踢擊</b><small>打退靠近的敵人</small></div></div><div class="control"><span class="control-icon">SPACE</span><div><b>能量衝擊</b><small>消耗能量的遠距攻擊</small></div></div><div class="control"><span class="control-icon">SHIFT</span><div><b>衝刺</b><small>按住加速移動</small></div></div><div class="control"><span class="control-icon">P / R</span><div><b>暫停 / 重開</b><small>M 切換背景音樂</small></div></div></div></section>
+      <section class="notes"><div class="notes-num">02 — BUILD NOTES</div><div class="notes-text"><h2>從原始素材到遊戲畫面。</h2><p>五份原始角色圖經去背、切成影格、對齊大小，再合併成橫向精靈圖。p5.js 負責逐格播放、判斷按鍵與處理碰撞；背景音樂為本專案自行合成的循環旋律。</p></div><a class="notes-link" href="docs/學生版_角色動畫製作紀錄_已填寫.md">查看製作紀錄 ↗</a></section>
+    </main>
+    <footer><span>PIXEL RIFT / STUDENT SPRITE PROJECT</span><span>ASU · SPRITETRACER FLOW · p5.js · WEB AUDIO</span><span>© 2026</span></footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <!-- Offline-friendly API shim used only if the official p5.js CDN is unreachable. -->
+  <script src="vendor/p5-local.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
