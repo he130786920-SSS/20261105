@@ -1,0 +1,138 @@
+{
+  "monkey_walk": {
+    "source": "1_all.png",
+    "frameWidth": 72,
+    "frameHeight": 76,
+    "frames": 8,
+    "width": 576,
+    "height": 76
+  },
+  "ninja_attack": {
+    "source": "2_all.png",
+    "frameWidth": 72,
+    "frameHeight": 76,
+    "frames": 8,
+    "width": 576,
+    "height": 76
+  },
+  "lee_idle": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 124,
+    "frames": 3,
+    "width": 450,
+    "height": 124
+  },
+  "lee_walk": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 124,
+    "frames": 6,
+    "width": 900,
+    "height": 124
+  },
+  "lee_jump": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 132,
+    "frames": 6,
+    "width": 900,
+    "height": 132
+  },
+  "lee_punch": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 124,
+    "frames": 7,
+    "width": 1050,
+    "height": 124
+  },
+  "lee_kick": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 124,
+    "frames": 6,
+    "width": 900,
+    "height": 124
+  },
+  "lee_hurt": {
+    "source": "Lee Jinkang (1).png",
+    "frameWidth": 150,
+    "frameHeight": 124,
+    "frames": 2,
+    "width": 300,
+    "height": 124
+  },
+  "chun_idle": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 10,
+    "width": 520,
+    "height": 56
+  },
+  "chun_walk": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 8,
+    "width": 416,
+    "height": 56
+  },
+  "chun_jump": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 6,
+    "width": 312,
+    "height": 56
+  },
+  "chun_punch": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 6,
+    "width": 312,
+    "height": 56
+  },
+  "chun_kick": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 6,
+    "width": 312,
+    "height": 56
+  },
+  "chun_hurt": {
+    "source": "Chun-Li(1).png",
+    "frameWidth": 52,
+    "frameHeight": 56,
+    "frames": 2,
+    "width": 104,
+    "height": 56
+  },
+  "robot_walk": {
+    "source": "CM_Enemies.png",
+    "frameWidth": 76,
+    "frameHeight": 76,
+    "frames": 8,
+    "width": 608,
+    "height": 76
+  },
+  "robot_idle": {
+    "source": "CM_Enemies.png",
+    "frameWidth": 76,
+    "frameHeight": 76,
+    "frames": 8,
+    "width": 608,
+    "height": 76
+  },
+  "energy_blast": {
+    "source": "原創程式繪製特效",
+    "frameWidth": 64,
+    "frameHeight": 64,
+    "frames": 6,
+    "width": 384,
+    "height": 64
+  }
+}
